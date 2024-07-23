@@ -1,0 +1,261 @@
+:root {
+  --primary: #44837d;
+  --secondary: #161038;
+  --text: #12121b;
+  --bg: #f9f7f7;
+  --main-bg: #fff;
+  --border: #eaeaea;
+  --items-bg: rgb(240, 243, 245);
+  --hover-bg: rgb(228, 243, 255);
+  --link: #6b6bf1;
+
+  --danger: #d01a1a;
+  --white: #fff;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--items-bg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 1rem;
+  overflow-x: hidden;
+}
+
+.main-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  margin: 2rem 0 1rem;
+  color: var(--primary);
+}
+
+.page-content {
+  background-color: var(--items-bg);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.space {
+  gap: 1%;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.info-display {
+  margin: 0.5rem 0;
+}
+
+.info-display label {
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
+.info-display .value {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.info-display .value a {
+  color: var(--link);
+}
+
+/* animations.css */
+.fade-in {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border: 0;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.2;
+  display: block;
+  background-color: var(--items-bg);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-view {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: var(--white);
+}
+
+.btn-sort {
+  border-color: currentColor;
+  border: 1px solid;
+  min-width: 150px;
+}
+
+.h-space {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.v-space {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  outline: none;
+}
+
+.filters-wrapper {
+  margin-bottom: 0.5rem;
+  background-color: var(--bg);
+  padding: 0.85rem;
+  border-radius: 6px;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 450px;
+}
+
+.no-data-found {
+  background-color: var(--items-bg);
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 990px) {
+  .search-box {
+    max-width: 100%;
+  }
+
+  .filters-wrapper .btn-sort {
+    margin-top: 0.85rem;
+  }
+
+  .page-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 776px) {
+  .page-title {
+    font-size: 1.1rem;
+  }
+  .university-view h2 {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 0.3rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .university-view {
+    flex-wrap: wrap;
+    justify-content: end !important;
+  }
+
+  .university-view > a {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

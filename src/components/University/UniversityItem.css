@@ -1,0 +1,32 @@
+.university-view {
+  width: 100%;
+  margin: 0.3rem 0;
+  border-radius: 6px;
+  padding: 0.85rem;
+  background-color: var(--items-bg);
+  transition: background-color 0.35s;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .university-view:hover {
+    background-color: var(--hover-bg);
+    transition: background-color 0.35s;
+} */
+
+.university-view h2 {
+  font-size: 0.95rem;
+  color: var(--text);
+  border-radius: 6px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
